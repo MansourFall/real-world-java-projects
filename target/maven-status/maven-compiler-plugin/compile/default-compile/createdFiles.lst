@@ -1,0 +1,6 @@
+BankTransaction.class
+BankStatementCSVParser.class
+BankStatementAnalyzer.class
+BankStatementParser.class
+MainApplication.class
+BankStatementProcessor.class
