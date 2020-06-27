@@ -8,7 +8,7 @@ import java.util.List;
 public class BankStatementCSVParser implements BankStatementParser {
     private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-    private BankTransaction parseFrom(final String line) {
+    public BankTransaction parseFrom(final String line) {
         final String[] columns = line.split(",");
 
         final LocalDate date = LocalDate.parse(columns[0], DATE_PATTERN);
