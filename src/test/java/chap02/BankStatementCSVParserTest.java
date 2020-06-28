@@ -1,7 +1,5 @@
 package chap02;
 
-import chap02.BankStatementCSVParser;
-import chap02.BankTransaction;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,8 +13,8 @@ public class BankStatementCSVParserTest {
 
     @Test
     public void shouldParseOneCorrectLine() {
-        final String line = "28-03-2020,600,Rent";
-        final BankTransaction expected = new BankTransaction(LocalDate.of(2020, Month.MARCH, 28), 600, "Rent");
+        final String line = "28-03-2020,-600,Rent";
+        final BankTransaction expected = new BankTransaction(LocalDate.of(2020, Month.MARCH, 28), -600, "Rent");
 
         final BankTransaction result = bankStatementCSVParser.parseFrom(line);
 
